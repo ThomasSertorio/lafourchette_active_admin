@@ -7,4 +7,8 @@ class User < ApplicationRecord
   # Associations
   has_many  :restaurants
   has_many  :reviews
+
+  def name
+    "#{self.email} - #{self.id}"
+  end
 end
